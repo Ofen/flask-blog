@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Sign In</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.username(class_="form-control", placeholder="Enter username") }}
+        </div>
+        <div class="form-group">
+            {{ form.password(class_="form-control", placeholder="Enter password") }}
+        </div>
+        {{ form.submit(class_="btn btn-dark") }}
+    </form>
+{% endblock %}
