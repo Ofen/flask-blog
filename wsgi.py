@@ -1,10 +1,14 @@
-#!/home/g/gks2spbru/.local/bin/python
+#!/home/g/gks2spbru/.local/bin/python3
 # -*- coding: utf-8 -*-
 
 import logging
 import sys
-sys.path.insert(0, '/home/g/gks2spbru/test/public_html/venv/lib/python3.6/site-packages/')
-sys.path.insert(0, '/home/g/gks2spbru/test/public_html/')
+import os
+
+APP_FOLDER = os.path.dirname(os.path.abspath(__file__))
+
+sys.path.insert(0, os.path.join(APP_FOLDER, 'venv/lib/python3.6/site-packages/'))
+sys.path.insert(0, APP_FOLDER)
 
 from app import app
 
